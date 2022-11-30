@@ -5,35 +5,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ExceptionsDemo {
+
     public static void show(){
         Account account = new Account();
         try {
             account.withdraw(10);
-        } catch (InsufficientFundsException ex) {
-            System.out.println(ex.getMessage());
+        } catch (AccountException ex) {
+            var cause = ex.getCause();
+            System.out.println(cause.getCause());
         }
-        try {
-            account.viewAccountBalance(100);
-        } catch (NoAccountException ex) {
-            System.out.println(ex.getMessage());
-        }
-        sayHello(null);
         fileReader();
     };
 
-    public static void sayHello(String name) {
-        try {
-            System.out.println(name.toUpperCase());
-        } catch (NullPointerException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
-
     public static void fileReader() {
-        /**
-         * try-with-resources statement
-         * return: nothing
-         */
         try (
             var reader = new FileReader("file.txt");
             var writer = new FileWriter("...");
