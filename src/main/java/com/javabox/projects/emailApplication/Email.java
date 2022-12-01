@@ -21,12 +21,12 @@ public class Email {
     public Email (String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        department = setDepartment();
-        password = generateRandomPassword(10);
-        System.out.println("Password is: " + password);
+        this.department = setDepartment();
+        this.password = generateRandomPassword(10);
+        System.out.println("Password is: " + this.password);
         email = nullStringCheck(firstName).toLowerCase() +
                 nullStringCheck(lastName).toLowerCase() + "@" +
-                department + "." + companySuffix;
+                this.department + "." + this.companySuffix;
     }
 
     private String nullStringCheck(String value) {
