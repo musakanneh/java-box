@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 class MortgageCalculatorTest {
 
-    @Test
-    void testMortgageCalculatorWithAddition() {
-        MortgageCalculator testMortgage = new MortgageCalculator();
-    }
+//    @Test
+//    void testMortgageCalculatorWithAddition() {
+//        MortgageCalculator testMortgage = new MortgageCalculator();
+//    }
 }
