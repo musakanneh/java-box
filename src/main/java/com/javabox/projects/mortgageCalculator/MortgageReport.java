@@ -1,4 +1,4 @@
-package com.javabox.mortgageCalculator;
+package com.javabox.projects.mortgageCalculator;
 import java.text.NumberFormat;
 
 public class MortgageReport {

@@ -1,7 +1,12 @@
-package com.javabox.mortgageCalculator;
+package com.javabox.projects.mortgageCalculator;
 
 public class MortgageCalculator {
-    public static double calculateBalance(int principal, float annualInterest, byte years, short numberOfPaymentMade) {
+    public static double calculateBalance(
+            int principal,
+            float annualInterest,
+            byte years,
+            short numberOfPaymentMade
+    ) {
         float monthlyInterest = annualInterest / Main.PERCENT / Main.MONTHS_IN_YEAR;
         short numberOfPayments = (short)(years * Main.MONTHS_IN_YEAR);
 
