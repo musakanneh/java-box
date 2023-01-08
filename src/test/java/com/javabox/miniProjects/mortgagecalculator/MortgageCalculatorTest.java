@@ -1,6 +1,4 @@
-package com.javabox.miniProjects.mortgageCalculator;
-
-import org.junit.jupiter.api.Test;
+package com.javabox.miniProjects.mortgagecalculator;
 
 class MortgageCalculatorTest {
 

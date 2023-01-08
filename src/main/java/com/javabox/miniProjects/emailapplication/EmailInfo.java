@@ -1,4 +1,4 @@
-package com.javabox.miniProjects.emailApplication;
+package com.javabox.miniProjects.emailapplication;
 
 public class EmailInfo {
     public static String emailInfo() {

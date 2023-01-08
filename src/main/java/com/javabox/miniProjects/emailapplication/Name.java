@@ -1,4 +1,4 @@
-package com.javabox.miniProjects.emailApplication;
+package com.javabox.miniProjects.emailapplication;
 
 public class Name {
     private static final String firstName = "Musa";

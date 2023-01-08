@@ -1,4 +1,4 @@
-package com.javabox.miniProjects.mortgageCalculator;
+package com.javabox.miniProjects.mortgagecalculator;
 import java.util.Scanner;
 
 public class Console {
