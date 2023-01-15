@@ -57,8 +57,38 @@ public class Array {
         return maxNumber;
     }
 
-    public int reverse() {
-        return ITEM_NOT_FOUND;
+    // Extend the Array class and add a method to return the
+    // common items in this array and another array.
+    public void intersect() {
+
+    }
+
+    // Extend the Array class and add a method to reverse the array.
+    // For example, if the array includes [1, 2, 3, 4],
+    // after reversing and printing it, we should see [4, 3, 2, 1].
+    public int  reverse() {
+        int left = items[0];
+        int right = items[items.length - 1];
+        int [] newArray = new int[items.length];
+
+        for (int i = 0; i < count; i--) {
+            while (left < right) {
+                int temp;
+                temp = left;
+                left = right;
+                right = temp;
+            }
+            left++;
+            right--;
+        }
+        return -1;
+    }
+
+    // Extend the Array class and add a new method to
+    // insert an item at a given index: public void
+    // insertAt(int item, int index)
+    public void insertAt() {
+
     }
 
     public void print() {

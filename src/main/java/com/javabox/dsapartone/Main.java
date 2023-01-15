@@ -1,24 +1,19 @@
 package com.javabox.dsapartone;
-
-import com.javabox.dsa.Array;
+import com.javabox.dsa.CharacterFinder;
+import com.javabox.dsa.HashTable;
 
 public class Main {
     public static void main(String[] args) {
-        Array numbers = new Array(10);
-        numbers.insert(10);
-        numbers.insert(30);
-        numbers.insert(40);
-        numbers.insert(50);
-        numbers.insert(60);
-        numbers.insert(60);
-        numbers.insert(70);
-        numbers.insert(80);
-        numbers.insert(90);
-        numbers.insert(91);
-        System.out.println(numbers.indexOf(30));
-        System.out.println(numbers.indexOf(30));
-        System.out.println("max " + numbers.max());
-        System.out.println(numbers.reverse());
-        numbers.print();
+//        CharacterFinder finder = new CharacterFinder();
+//        var ch =  finder.findFirstRepeatingChar("a green apple");
+//        System.out.println(ch);
+//        CharacterFinder findUnique = new CharacterFinder();
+//        var uniqueResult = findUnique.firstRepeatingChar("green apple");
+//        System.out.println(uniqueResult);
+        HashTable table = new HashTable();
+        table.put(6, "A");
+        table.put(8, "B");
+        table.put(11, "C");
+        System.out.println("DONE!" + table.get(6));
     }
 }
