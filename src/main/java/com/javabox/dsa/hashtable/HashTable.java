@@ -1,4 +1,4 @@
-package com.javabox.dsa;
+package com.javabox.dsa.hashtable;
 import java.util.LinkedList;
 
 public class HashTable {

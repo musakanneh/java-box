@@ -1,4 +1,5 @@
-package com.javabox.dsa;
+package com.javabox.dsa.array;
+import java.util.Arrays;
 
 public class Array {
     private int[] items;
@@ -7,13 +8,6 @@ public class Array {
 
     public Array(int length) {
         items = new int[length];
-    }
-
-    public boolean inputIsValid(int value) {
-        if (value < 0 || value >= count) {
-            throw new IllegalArgumentException("cannot perform operation");
-        }
-        return false;
     }
 
     public void insert(int item) {
@@ -29,17 +23,26 @@ public class Array {
     }
 
     public void removeAt(int index) {
-        if (inputIsValid(index)) {
-            for (int i = index; i < count; i++) {
-                items[i] = items[i + 1];
-            }
-            count--;
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException("Cannot perform operation");
         }
+
+        for (int i = index; i < count; i++) {
+            items[i] = items[i + 1];
+        }
+        count--;
     }
 
-    public int indexOf(int searchableItem) {
+    // Extend the Array class and add a new method to
+    // insert an item at a given index: public void
+    // insertAt(int item, int index)
+    public void insertAt(int item, int index) {
+        items[index] = item;
+    }
+
+    public int indexOf(int item) {
         for (int i = 0; i < count; i++) {
-            if (items[i] == searchableItem) {
+            if (items[i] == item) {
                 return i;
             }
         }
@@ -47,14 +50,14 @@ public class Array {
     }
 
     public int max() {
-        int maxNumber = 0;
+        int maxNumber = count;
         for (int i = 0; i < count; i++) {
             if (items[i] > maxNumber) {
                 maxNumber = items[i];
-                items[i]++;
+                return maxNumber;
             }
         }
-        return maxNumber;
+        return ITEM_NOT_FOUND;
     }
 
     // Extend the Array class and add a method to return the
@@ -66,11 +69,9 @@ public class Array {
     // Extend the Array class and add a method to reverse the array.
     // For example, if the array includes [1, 2, 3, 4],
     // after reversing and printing it, we should see [4, 3, 2, 1].
-    public int  reverse() {
+    public void reverse() {
         int left = items[0];
         int right = items[items.length - 1];
-        int [] newArray = new int[items.length];
-
         for (int i = 0; i < count; i--) {
             while (left < right) {
                 int temp;
@@ -81,14 +82,6 @@ public class Array {
             left++;
             right--;
         }
-        return -1;
-    }
-
-    // Extend the Array class and add a new method to
-    // insert an item at a given index: public void
-    // insertAt(int item, int index)
-    public void insertAt() {
-
     }
 
     public void print() {
